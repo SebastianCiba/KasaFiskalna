@@ -16,29 +16,49 @@ using System.Windows.Shapes;
 
 namespace KasaFiskalna
 {
-    /// <summary>
-    /// Logika interakcji dla klasy MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
+        public List<float> bill = new List<float>();
+        public float sum;
+        public float cash;
+        public float change;
+
         public MainWindow()
         {
+            InitializeComponent();
+        }
 
+        private void Print()
+        {
             try
             {
                 using (StreamWriter writer = new StreamWriter(("Start.txt"), true))
                 {
-                    writer.WriteLine("Start information");
+                    //writer.WriteLine("12.55");
+                    //writer.WriteLine("12.51");
+                    //writer.WriteLine("13.55");
+                    //writer.WriteLine("12.11");
+                    //writer.WriteLine("0.55");
+                    //writer.WriteLine("2.55");
+                    //writer.WriteLine("1.55");
                 }
 
                 using (StreamReader reader = new StreamReader("Start.txt"))
                 {
                     string line;
 
-                    while((line = reader.ReadLine()) != null)
+                    while ((line = reader.ReadLine()) != null)
                     {
-                        Console.WriteLine(line);
+                        bill.Add(float.Parse(line));
+                        //BillTextBox.Text += line;
+                        //BillTextBox.Text += Environment.NewLine;
                     }
+
+                    foreach (float price in line)
+                    {
+                        sum += price;
+                    }
+
                 }
             }
             catch (Exception e)
@@ -46,11 +66,33 @@ namespace KasaFiskalna
                 Console.WriteLine("No paper");
                 Console.WriteLine(e.Message);
             }
-
-            InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void OKButton_Click(object sender, RoutedEventArgs e)
+        {
+            Print();
+            Screen.Text += "Suma: " + sum;
+            Screen.Text += Environment.NewLine;
+            Screen.Text += "Gotówka: " + cash;
+            Screen.Text += Environment.NewLine;
+            Screen.Text += "-----------";
+            Screen.Text += Environment.NewLine;
+            Screen.Text += "Reszta: " + change;
+
+            //Screen.Text = "";
+        }
+
+        private void Screen_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void CButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CashButton_Click(object sender, RoutedEventArgs e)
         {
 
         }
