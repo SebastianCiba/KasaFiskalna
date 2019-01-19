@@ -5,34 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KasaFiskalna"
         mc:Ignorable="d"
-        Title="MainWindow" Height="487" Width="800">
+        Title="MainWindow" Height="487" Width="800" Background="#FF646A6A">
     <Grid Margin="10,0,13,11">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="365*"/>
             <ColumnDefinition Width="414*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="BillTextBlock" HorizontalAlignment="Left" Height="312" Margin="25,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="297" Text="Paragon"/>
-        <TextBox x:Name="Screen" HorizontalAlignment="Left" Height="81" Margin="25,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="297" AutomationProperties.Name="Screen" TextChanged="Screen_TextChanged"/>
-        <Button x:Name="printButton" Content="OK" HorizontalAlignment="Left" Margin="227,361,0,0" VerticalAlignment="Top" Width="165" Click="OKButton_Click" RenderTransformOrigin="1,12.7" Height="79" Grid.Column="1"/>
-        <Button x:Name="OK" Content="Zatwierdz" HorizontalAlignment="Left" Margin="312,275,0,0" VerticalAlignment="Top" Width="80" Height="80" Click="accept_Click" Grid.Column="1"/>
-        <Button Content="Raport" HorizontalAlignment="Left" Margin="312,21,0,0" VerticalAlignment="Top" Width="80" Height="80" Grid.Column="1"/>
+        <TextBlock x:Name="BillTextBlock" HorizontalAlignment="Left" Height="312" Margin="25,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="297" Foreground="Black" Background="White"/>
+        <TextBox x:Name="Screen" HorizontalAlignment="Left" Height="81" Margin="25,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="297" AutomationProperties.Name="Screen" TextChanged="Screen_TextChanged" Background="#FF8CE6FF" Foreground="White" FontSize="14" FontWeight="Bold"/>
+        <Button x:Name="printButton" Content="OK" HorizontalAlignment="Left" Margin="227,361,0,0" VerticalAlignment="Top" Width="165" Click="OKButton_Click" RenderTransformOrigin="1,12.7" Height="79" Grid.Column="1" Foreground="Black" BorderBrush="#FF7090FF" Background="#FF2A910C" FontSize="36" FontWeight="Bold"/>
+        <Button x:Name="OK" Content="Zatwierdz" HorizontalAlignment="Left" Margin="312,275,0,0" VerticalAlignment="Top" Width="80" Height="80" Click="accept_Click" Grid.Column="1" Foreground="Black" BorderBrush="#FF7090FF" Background="#FFA0AAAA" FontSize="16" FontWeight="Bold"/>
+        <Button Content="Raport" HorizontalAlignment="Left" Margin="312,21,0,0" VerticalAlignment="Top" Width="80" Height="80" Grid.Column="1" Foreground="Black" BorderBrush="#FF7090FF" Background="#FFA0AAAA" FontSize="16" FontWeight="Bold"/>
         <Button Content="Button" HorizontalAlignment="Left" Height="3" Margin="296,182,0,0" VerticalAlignment="Top" Width="0"/>
-        <Button x:Name="CButton" Content="C" HorizontalAlignment="Left" Margin="56,20,0,0" VerticalAlignment="Top" Width="80" Click="CButton_Click" Height="80" Grid.Column="1"/>
-        <Button x:Name="PaperButton" Content="Papier" HorizontalAlignment="Left" Margin="142,21,0,0" VerticalAlignment="Top" Width="80" Height="80" Grid.Column="1"/>
-        <Button x:Name="FButton" Content="F" HorizontalAlignment="Left" Margin="227,21,0,0" VerticalAlignment="Top" Width="80" Height="80" Click="FButton_Click" Grid.Column="1"/>
-        <Button x:Name="CashButton" Content="Gotówka" HorizontalAlignment="Left" Margin="312,190,0,0" VerticalAlignment="Top" Width="80" Height="80" Click="CashButton_Click" Grid.Column="1"/>
-        <Button x:Name="number0Button" Content="0" HorizontalAlignment="Left" Margin="56,360,0,0" VerticalAlignment="Top" Width="80" Height="80" Click="number0Button_Click" Grid.Column="1"/>
-        <Button x:Name="dotButton" Content="." HorizontalAlignment="Left" Margin="142,360,0,0" VerticalAlignment="Top" Width="80" Height="80" Click="dotButton_OnClick" Grid.Column="1"/>
-        <Button x:Name="number1Button" Content="1" HorizontalAlignment="Left" Margin="56,275,0,0" VerticalAlignment="Top" Width="80" Height="80" Click="number1Button_Click" Grid.Column="1"/>
-        <Button x:Name="number2Button" Content="2" HorizontalAlignment="Left" Margin="142,275,0,0" VerticalAlignment="Top" Width="80" Height="80" Click="number2Button_OnClick" Grid.Column="1"/>
-        <Button x:Name="number3Buton" Content="3" HorizontalAlignment="Left" Margin="227,276,0,0" VerticalAlignment="Top" Width="80" Height="80" Click="number3Button_OnClick" Grid.Column="1"/>
-        <Button x:Name="number4Button" Content="4" HorizontalAlignment="Left" Margin="56,190,0,0" VerticalAlignment="Top" Width="80" Height="80" Click="number4Button_OnClick" Grid.Column="1"/>
-        <Button x:Name="number5Button" Content="5" HorizontalAlignment="Left" Margin="141,190,0,0" VerticalAlignment="Top" Width="80" Height="80" Click="number5Button_OnClick" Grid.Column="1"/>
-        <Button x:Name="number6Button" Content="6" HorizontalAlignment="Left" Margin="227,191,0,0" VerticalAlignment="Top" Width="80" Height="80" Click="number6Button_OnClick" Grid.Column="1"/>
-        <Button x:Name="number7Button" Content="7" HorizontalAlignment="Left" Margin="56,105,0,0" VerticalAlignment="Top" Width="80" Height="80" Click="number7Button_OnClick" Grid.Column="1"/>
-        <Button x:Name="number8Button" Content="8" HorizontalAlignment="Left" Margin="142,105,0,0" VerticalAlignment="Top" Width="80" Height="80" Click="number8Button_OnClick" Grid.Column="1"/>
-        <Button x:Name="number9Button" Content="9" HorizontalAlignment="Left" Margin="227,106,0,0" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.533,-1.35" Height="80" Click="number9Button_OnClick" Grid.Column="1"/>
-        <Button x:Name="SumButton" Content="Suma w kasetce" HorizontalAlignment="Left" Margin="312,105,0,0" VerticalAlignment="Top" Width="80" Height="80" Grid.Column="1"/>
+        <Button x:Name="CButton" Content="C" HorizontalAlignment="Left" Margin="56,20,0,0" VerticalAlignment="Top" Width="80" Click="CButton_Click" Height="80" Grid.Column="1" Background="#FFFF1E1E" Foreground="Black" BorderBrush="#FF7090FF" FontSize="36" FontWeight="Bold"/>
+        <Button x:Name="PaperButton" Content="Papier" HorizontalAlignment="Left" Margin="142,21,0,0" VerticalAlignment="Top" Width="80" Height="80" Grid.Column="1" Foreground="Black" BorderBrush="#FF7090FF" Background="#FFA0AAAA" FontSize="24" FontWeight="Bold"/>
+        <Button x:Name="FButton" Content="F" HorizontalAlignment="Left" Margin="227,21,0,0" VerticalAlignment="Top" Width="80" Height="80" Grid.Column="1" Foreground="Black" BorderBrush="#FF7090FF" Background="#FFA0AAAA" FontSize="36" FontWeight="Bold" Click="FButton_Click"/>
+        <Button x:Name="CashButton" Content="Gotówka" HorizontalAlignment="Left" Margin="312,190,0,0" VerticalAlignment="Top" Width="80" Height="80" Click="CashButton_Click" Grid.Column="1" Foreground="Black" BorderBrush="#FF7090FF" Background="#FFA0AAAA" FontSize="16" FontWeight="Bold"/>
+        <Button x:Name="number0Button" Content="0" HorizontalAlignment="Left" Margin="56,360,0,0" VerticalAlignment="Top" Width="80" Height="80" Click="number0Button_Click" Grid.Column="1" BorderBrush="#FF7090FF" Foreground="Black" Background="White" FontSize="36" FontWeight="Bold"/>
+        <Button x:Name="dotButton" Content="." HorizontalAlignment="Left" Margin="142,360,0,0" VerticalAlignment="Top" Width="80" Height="80" Click="dotButton_OnClick" Grid.Column="1" BorderBrush="#FF7090FF" Foreground="Black" Background="White" FontSize="36" FontWeight="Bold"/>
+        <Button x:Name="number1Button" Content="1" HorizontalAlignment="Left" Margin="56,275,0,0" VerticalAlignment="Top" Width="80" Height="80" Click="number1Button_Click" Grid.Column="1" BorderBrush="#FF7090FF" Foreground="Black" Background="White" FontSize="36" FontWeight="Bold"/>
+        <Button x:Name="number2Button" Content="2" HorizontalAlignment="Left" Margin="142,275,0,0" VerticalAlignment="Top" Width="80" Height="80" Click="number2Button_OnClick" Grid.Column="1" BorderBrush="#FF7090FF" Foreground="Black" Background="White" FontSize="36" FontWeight="Bold"/>
+        <Button x:Name="number3Buton" Content="3" HorizontalAlignment="Left" Margin="227,276,0,0" VerticalAlignment="Top" Width="80" Height="80" Click="number3Button_OnClick" Grid.Column="1" BorderBrush="#FF7090FF" Foreground="Black" Background="White" FontSize="36" FontWeight="Bold"/>
+        <Button x:Name="number4Button" Content="4" HorizontalAlignment="Left" Margin="56,190,0,0" VerticalAlignment="Top" Width="80" Height="80" Click="number4Button_OnClick" Grid.Column="1" BorderBrush="#FF7090FF" Foreground="Black" Background="White" FontSize="36" FontWeight="Bold"/>
+        <Button x:Name="number5Button" Content="5" HorizontalAlignment="Left" Margin="141,190,0,0" VerticalAlignment="Top" Width="80" Height="80" Click="number5Button_OnClick" Grid.Column="1" BorderBrush="#FF7090FF" Foreground="Black" Background="White" FontSize="36" FontWeight="Bold"/>
+        <Button x:Name="number6Button" Content="6" HorizontalAlignment="Left" Margin="227,191,0,0" VerticalAlignment="Top" Width="80" Height="80" Click="number6Button_OnClick" Grid.Column="1" BorderBrush="#FF7090FF" Foreground="Black" Background="White" FontSize="36" FontWeight="Bold"/>
+        <Button x:Name="number7Button" Content="7" HorizontalAlignment="Left" Margin="56,105,0,0" VerticalAlignment="Top" Width="80" Height="80" Click="number7Button_OnClick" Grid.Column="1" BorderBrush="#FF7090FF" Foreground="Black" Background="White" FontSize="36" FontWeight="Bold"/>
+        <Button x:Name="number8Button" Content="8" HorizontalAlignment="Left" Margin="142,105,0,0" VerticalAlignment="Top" Width="80" Height="80" Click="number8Button_OnClick" Grid.Column="1" Background="White" BorderBrush="#FF7090FF" Foreground="Black" FontSize="36" FontWeight="Bold"/>
+        <Button x:Name="number9Button" Content="9" HorizontalAlignment="Left" Margin="227,106,0,0" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.533,-1.35" Height="80" Click="number9Button_OnClick" Grid.Column="1" BorderBrush="#FF7090FF" Foreground="Black" Background="White" FontSize="36" FontWeight="Bold"/>
+        <Button x:Name="SumButton" Content="Suma &#xD;&#xA;w kasetce" HorizontalAlignment="Left" Margin="312,105,0,0" VerticalAlignment="Top" Width="80" Height="80" Grid.Column="1" Foreground="Black" BorderBrush="#FF7090FF" Background="#FFA0AAAA" FontSize="16" FontWeight="Bold" Click="SumButton_Click"/>
+        <Button Grid.ColumnSpan="2" Content="*Skanuje &#xD;&#xA;prudukt*" HorizontalAlignment="Left" Height="60" Margin="340,361,0,0" VerticalAlignment="Top" Width="61" ScrollViewer.CanContentScroll="True" Click="Skan_Click" ScrollViewer.HorizontalScrollBarVisibility="Auto" BorderBrush="Red" Background="#FFFFFF48"/>
+        <Button Grid.ColumnSpan="2" Content="Start" HorizontalAlignment="Left" Height="41" Margin="350,44,0,0" VerticalAlignment="Top" Width="41" Click="Start_Click"/>
+        <Label x:Name="Bill" Content="Paragon" HorizontalAlignment="Left" Margin="25,109,0,0" VerticalAlignment="Top" Width="85"/>
 
     </Grid>
 </Window>
